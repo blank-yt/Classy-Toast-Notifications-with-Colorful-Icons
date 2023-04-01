@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #2c2c2c;
+  background-color: #9d7a80;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content>div {
+  margin-bottom: 20px;
+}
+
+.notification {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  min-width: 370px;
+  max-width: 700px;
+  width: fit-content;
+  padding: 20px;
+  border-radius: 5px;
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+  border-left: 7px solid;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px;
+}
+
+.notification:before {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  font-family: "Font Awesome 5 Free";
+  color: #fff;
+  font-weight: 900;
+}
+
+.notification.circle:before {
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.notification_close {
+  color: #C6C4D4;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.notification_title {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.notification_title--info {
+  color: #867df3;
+}
+
+.notification_title--success {
+  color: #008e00;
+}
+
+.notification_title--warning {
+  color: #f18c33;
+}
+
+.notification_title--danger {
+  color: #fd0d0d;
+}
+
+.notification_content p {
+  margin-top: 0;
+  line-height: 1.5;
+}
+
+.notification_content p:last-child {
+  margin-bottom: 0;
+}
+
+.notification--info {
+  border-color: #867df3;
+}
+
+.notification--info:before {
+  background-color: #867df3;
+  content: "\f129";
+  font-size: 20px;
+}
+
+.notification--success {
+  border-color: #008e00;
+}
+
+.notification--success:before {
+  background-color: #008e00;
+  content: "\f00c";
+  font-size: 24px;
+}
+
+.notification--warning {
+  border-color: #f18c33;
+}
+
+.notification--warning:before {
+  color: #f18c33;
+  content: "\f071";
+  font-size: 36px;
+}
+
+.notification--danger {
+  border-color: #fd0d0d;
+}
+
+.notification--danger:before {
+  background-color: #fd0d0d;
+  content: "\f00d";
+  font-size: 28px;
+}
